@@ -1,0 +1,25 @@
+---
+title: "DataSet"
+author: "Nathan Workman"
+date: "March 19, 2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(haven)
+```
+
+
+The Dataset I choosen is called Suicide Rates Overview from 1985 to 2016. The url is https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016. 
+
+The dataset did not need any parsing and it did not needed to be thined. 
+
+
+```{r}
+set1 <- read.csv("C:/Users/workm/Desktop/College/CSSDataSets/master.csv")
+
+glimpse(set1)
+```
+

@@ -1,0 +1,12 @@
+---
+title: "RHomework3"
+author: "Nathan Workman"
+date: "October 29, 2019"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+

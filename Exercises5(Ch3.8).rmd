@@ -1,0 +1,53 @@
+---
+title: "Exercises5(Ch3.7)"
+author: "Nathan Workman"
+date: "January 17, 2019"
+output: pdf_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, fig.height = 6, fig.width = 12)
+library(ggplot2)
+```
+
+
+
+3.8.1 Exercises
+
+
+1. What is the problem with this plot? How could you improve it?
+
+```{r echo = F}
+ggplot(data = mpg, mapping = aes(x = cty, y = hwy)) + 
+  geom_point()
+```
+
+There is an overlapping of data. TO fix use the position = jitter
+
+```{r echo = F}
+ggplot(data = mpg, mapping = aes(x = cty, y = hwy), position = "jitter") + 
+  geom_point(mapping = aes(),position = "jitter")
+```
+
+
+
+2. What parameters to geom_jitter() control the amount of jittering?
+
+\begin{itemize}
+      \item Height- Horizontal Jitter placement
+      \item Width- Vertical Jitter placemnet
+      \end{itemize}
+
+
+3. Compare and contrast geom_jitter() with geom_count().
+geom jitter() is used for two varaibles with a continuous x and y to where as geom count() uses a discrete x and discrete y.
+
+4. What's the default position adjustment for geom_boxplot()? Create a visualisation of the mpg dataset that demonstrates it.
+The default position adjustment for geom boxplot() is dodge2.
+
+```{r echo = F}
+ggplot(data = mpg, aes(x = drv, y = hwy)) +
+  geom_boxplot()
+```
+
